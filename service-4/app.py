@@ -4,30 +4,34 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/chance', methods=['GET', 'POST'])
 def chance():
-    # Gets an shoot
-    shoot = requests.get("http://localhost:5001/")
+    # Gets a shot
+    shot_response = requests.get("http://localhost:5001/shooter")
+    shot = (shot_response.text)
     # Gets the dive
-    dive = requests.get("http://localhost:5002/")
+    dive_response = requests.get("http://localhost:5002/goalie")
+    dive = (dive_response.text)
+    # Gets shot_dive
+    shot_dive = shot + "-" + dive
     chance = None
-    if shoot == "Left" and dive == "Left":
+    if shot_dive == "Left-Left":
         chance = "63%"
-    elif shoot == "Left" and dive == "Middle":
+    elif shot_dive == "Left-Middle":
         chance = "100%"
-    elif shoot == "Left" and dive == "Right":
+    elif shot_dive == "Left-Right":
         chance = "94%"
-    elif shoot == "Middle" and dive == "Left":
+    elif shot_dive == "Middle-Left":
         chance = "81%"
-    elif shoot == "Middle" and dive == "Middle":
+    elif shot_dive == "Middle-Middle":
         chance = "0%"
-    elif shoot == "Middle" and dive == "Right":
+    elif shot_dive == "Middle-Right":
         chance = "89%"
-    elif shoot == "Right" and dive == "Left":
+    elif shot_dive == "Right-Left":
         chance = "90%"
-    elif shoot == "Right" and dive == "Middle":
+    elif shot_dive == "Right-Middle":
         chance = "100%"
-    elif shoot == "Right" and dive == "Right":
+    elif shot_dive == "Right-Right":
         chance = "44%"
     return Response(chance, mimetype="text/plain") 
 

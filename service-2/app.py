@@ -3,7 +3,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/shooter', methods=['GET'])
 def shooter():
     directions = ["Left", "Middle", "Right"]
     return Response(random.choices(directions), mimetype="text/plain")
