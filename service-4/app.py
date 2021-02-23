@@ -4,7 +4,7 @@ import random
 
 app = Flask(__name__)
 
-@app.route('/chance', methods=['GET', 'POST'])
+@app.route('/chance', methods=['GET'])
 def chance():
     # Gets a shot
     shot_response = requests.get("http://localhost:5001/shooter")
