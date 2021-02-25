@@ -1,0 +1,9 @@
+flask
+requests
+Werkzeug
+pytest 
+pytest-cov
+flask-SQLAlchemy
+Jinja2
+SQLAlchemy
+pymysql
