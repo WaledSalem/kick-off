@@ -12,11 +12,11 @@ def home():
 @app.route('/index', methods=['GET'])
 def index():
     # Gets a shot
-    shot = requests.get("http://localhost:5001/shooter")
+    shot = requests.get("http://service-2:5001/shooter")
     # Gets the dive
-    dive = requests.get("http://localhost:5002/goalie")
+    dive = requests.get("http://service-3:5002/goalie")
     # Gets the chance
-    chance = requests.get("http://localhost:5003/chance")
+    chance = requests.get("http://service-4:5003/chance")
 
     db_data = Chances(shot=shot.text, dive=dive.text, chance=chance.text)
     db.session.add(db_data)

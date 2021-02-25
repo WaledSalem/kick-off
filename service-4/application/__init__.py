@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route('/chance', methods=['GET'])
 def chance():
     # Gets a shot
-    shot_response = requests.get("http://localhost:5001/shooter")
+    shot_response = requests.get("http://service-2:5001/shooter")
     shot = (shot_response.text)
     # Gets the dive
-    dive_response = requests.get("http://localhost:5002/goalie")
+    dive_response = requests.get("http://service-3:5002/goalie")
     dive = (dive_response.text)
     # Gets shot_dive
     shot_dive = shot + "-" + dive
