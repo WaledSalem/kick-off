@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <body>
+{% extends "main.html" %}
+
+{% block title %} Index {% endblock %}
+
+{% block body %}
+
+<div>
+    <h2> Return Home <b/> <button><a href="home">Home</a></button> </h2>
+    <div>
         <h1>The Shooter direction is {{ shot }}</h1>
         <h1>The Goalie direction is {{ dive }}</h1>
         <h1>The Chance of scoring is {{ chance }}</h1>
-        <h2>Refresh for a new kick</h2>
-    </body>
-</html>
+        <div>
+        </div>
+        <h2>Shoot again<b/> <button><a href="index">Kick Off</a></button> </h2>
+    </div>
+<div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "main.html" %}
+
+{% block title %} Read {% endblock %}
+
+{% block body %}
+<h1>Record</h1>
+<div>
+    <h2> Return Home <b/> <button><a href="home">Home</a></button> </h2>
+    <div>
+        <div>
+            <table>
+            <tr>
+                {% for header in heading %}
+                <th>{{header}}</th>
+                {% endfor %}
+            </tr>
+            {% for chance in all_chances%}
+            <tr>
+            <td>{{chance.id}}</td> 
+            <td>{{chance.shot}}</td> 
+            <td>{{chance.dive}}</td> 
+            <td>{{chance.chance}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

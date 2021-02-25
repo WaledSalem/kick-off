@@ -8,3 +8,5 @@ python3 app.py
 
 python3 -m pytest
 python3 -m pytest --cov application --cov-report term-missing .
+
+git branch -d
