@@ -13,12 +13,12 @@ pipeline {
         }
         stage('Build-Images'){
             steps{
-                sh './scripts/build-images.sh'
+                sh './scripts/build.sh'
             }
         }
         stage('Deploy-Services'){
             steps{
-                sh './scripts/deploy-services.sh'
+                sh './scripts/deploy.sh'
             }
         }                   
     }
