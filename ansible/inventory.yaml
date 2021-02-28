@@ -1,0 +1,18 @@
+all:
+  children:
+    docker:
+      hosts:
+        34.89.86.33:
+    manager:
+      hosts:      
+        34.89.28.48:
+    worker:
+      hosts:
+        35.189.105.8:
+    nginx:
+      hosts:
+        34.105.216.251:
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: '~/.ssh/jenkins_agent_key'
