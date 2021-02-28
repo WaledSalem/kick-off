@@ -1,4 +1,5 @@
 #!/bin/bash
+pwd
 cd kick-off
 python3 -m venv venv
 . venv/bin/activate
