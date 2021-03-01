@@ -7,8 +7,6 @@ git clone https://github.com/WaledSalem/kick-off.git
 
 cd kick-off/loadbalancer/
 
-docker-compose down --rmi all 
-
 docker-compose up -d
 
 EOF

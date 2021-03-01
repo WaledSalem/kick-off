@@ -7,7 +7,5 @@ git clone https://github.com/WaledSalem/kick-off.git
 
 cd kick-off
 
-docker stack rm kick-stack
-
 docker stack deploy --compose-file docker-compose.yaml kick-stack
 EOF
