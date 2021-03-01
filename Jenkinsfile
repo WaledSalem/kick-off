@@ -8,7 +8,7 @@ pipeline {
         }
         stage('DDeploy'){
             steps{
-                sh './scripts/ddeploy.sh'
+                sh './dscripts/ddeploy.sh'
             }
         }                   
         stage('DLoadbalance'){
