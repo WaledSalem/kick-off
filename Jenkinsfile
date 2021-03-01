@@ -18,8 +18,10 @@ pipeline {
         }
         stage('Push'){
             steps{
-                withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/'){
-                    image.push
+                script{
+                    withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/'){
+                        image.push
+                    }
                 }
             }
         }
@@ -28,5 +30,4 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }                   
-    }
 }
