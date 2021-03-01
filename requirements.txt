@@ -7,3 +7,4 @@ flask-SQLAlchemy
 Jinja2
 SQLAlchemy
 pymysql
+flask-testing
