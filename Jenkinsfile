@@ -21,9 +21,9 @@ pipeline {
                 sh './scripts/deploy.sh'
             }
         }                   
-        stage('Deploy'){
+        stage('Loadbalance'){
             steps{
-                sh './scripts/deploy.sh'
+                sh './scripts/nginx.sh'
             }
         }
     }
