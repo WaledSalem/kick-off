@@ -11,14 +11,21 @@ pipeline {
                 sh './scripts/ansible.sh'
             }
         }
-        stage('Build-Images'){
+        stage('Build'){
             steps{
-                sh './scripts/build-images.sh'
+                sh './scripts/build.sh'
             }
         }
-        stage('Deploy-Services'){
+        stage('Push'){
             steps{
-                sh './scripts/deploy-services.sh'
+                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials'){
+                    image.push
+                }
+            }
+        }
+        stage('Deploy'){
+            steps{
+                sh './scripts/deploy.sh'
             }
         }                   
     }

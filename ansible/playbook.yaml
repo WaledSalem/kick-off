@@ -1,13 +1,6 @@
 ---
 - name: install docker
   become: true
-  hosts: localhost
-  connection: local
-  roles:
-  - docker
-
-- name: install docker
-  become: true
   hosts: nginx
   roles:
   - docker
