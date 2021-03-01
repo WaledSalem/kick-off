@@ -16,19 +16,9 @@ pipeline {
                 sh './scripts/build.sh'
             }
         }
-        stage('Push'){
-            steps{
-                script{
-                    withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/'){
-                        docker-compose push
-                    }
-                }
-            }
-        }
         stage('Deploy'){
             steps{
                 sh './scripts/deploy.sh'
             }
-        }
-    } 
-}
+        }                   
+    }
