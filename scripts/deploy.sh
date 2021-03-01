@@ -20,7 +20,8 @@ git clone https://github.com/WaledSalem/kick-off.git
 
 cd kick-off/loadbalancer/
 
-docker rm -f swanginx
+docker-compose down --rmi all 
 
-docker run -d -p 80:80 --name swanginx --mount type=bind,source=~/kick-off/loadbalancer/nginx.conf,target=/etc/nginx/nginx.conf nginx:alpine
+docker-compose up -d
+
 EOF
