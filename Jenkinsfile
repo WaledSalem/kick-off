@@ -1,5 +1,6 @@
 pipeline {
-    agent any 
+    agent any
+    stages{ 
         stage('DBuild'){
             steps{
                 sh './dscripts/dbuild.sh'
@@ -15,4 +16,5 @@ pipeline {
                 sh './dscripts/dnginx.sh'
             }
         }
+    }
 }
