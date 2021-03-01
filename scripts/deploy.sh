@@ -22,5 +22,5 @@ cd kick-off/loadbalancer/
 
 docker rm -f swanginx
 
-docker run -d -p 80:80 --name swanginx --mount type=bind,source=$(pwd)/nginx/nginx.conf,target=/etc/nginx/nginx.conf nginx:alpine
+docker run -d -p 80:80 --name swanginx --mount type=bind,source=~/kick-off/loadbalancer/nginx.conf,target=/etc/nginx/nginx.conf nginx:alpine
 EOF

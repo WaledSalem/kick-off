@@ -1,5 +1,3 @@
 flask
 requests
 Werkzeug
-pytest 
-pytest-cov
