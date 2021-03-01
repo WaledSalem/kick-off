@@ -20,7 +20,7 @@ pipeline {
             steps{
                 script{
                     withDockerRegistry(credentialsId: 'docker-hub-credentials', url: 'https://index.docker.io/v1/'){
-                        image.push
+                        docker-compose push
                     }
                 }
             }
