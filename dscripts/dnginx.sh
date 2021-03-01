@@ -1,7 +1,7 @@
 #!/bin/bash
 ssh -i ~/.ssh/jenkins_agent_key swanginx << EOF
 
-sudo docker system prune --all --force
+docker rm -f $(docker ps -qa)
 sudo rm -rf kick-off
 
 EOF
