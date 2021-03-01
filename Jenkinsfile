@@ -29,5 +29,6 @@ pipeline {
             steps{
                 sh './scripts/deploy.sh'
             }
-        }                   
+        }
+    } 
 }
