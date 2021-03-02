@@ -16,11 +16,11 @@ def chance():
     shot_dive = shot + "-" + dive
     chance = None
     if shot_dive == "Left-Left":
-        chance = "63%"
+        chance = "90%"
     elif shot_dive == "Left-Middle":
         chance = "100%"
     elif shot_dive == "Left-Right":
-        chance = "94%"
+        chance = "44%"
     elif shot_dive == "Middle-Left":
         chance = "81%"
     elif shot_dive == "Middle-Middle":
@@ -28,9 +28,9 @@ def chance():
     elif shot_dive == "Middle-Right":
         chance = "89%"
     elif shot_dive == "Right-Left":
-        chance = "90%"
+        chance = "63%"
     elif shot_dive == "Right-Middle":
         chance = "100%"
     elif shot_dive == "Right-Right":
-        chance = "44%"
+        chance = "94%"
     return Response(chance, mimetype="text/plain") 
