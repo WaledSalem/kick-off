@@ -56,7 +56,7 @@ Two different implementations were created for services #2, #3 & #4 , to demonst
 
 ## Links
 
-Waled Salem  
+LinkedIn  
 [@WaledSalem](https://www.linkedin.com/in/waled-salem-9894261ba)
 
 Kanban Trello Board  
